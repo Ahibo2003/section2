@@ -1,0 +1,144 @@
+/* 1. الأب الرئيسي (المنظم والمشغل للمغناطيس) */
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px 40px; /* هوامش لتنفس النافبار من الأطراف */
+}
+
+/* 2. تنسيق اللوجو (snap) ليعود فخماً كما صممتِيه */
+.logo {
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: auto;
+}
+/* 3. القائمة اليسارية والتحكم بالمسافات */
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none; /* إزالة النقط المزعجة نهائياً */
+  padding: 0;
+  margin: 0;
+  gap: 40px; /* المسافة السحرية المتقنة بين الكلمات بالبكسل */
+  margin-left: 60px; /* إعطاء مسافة آمنة ومريحة بين اللوجو وبداية الروابط */
+}
+
+/* 4. إرجاع تنسيق الروابط التشعبية النظيف الملكي */
+a {
+  text-decoration: none; /* إزالة الخطوط السفلية تماماً */
+  color: #7f7f7f; /* لون رمادي دافئ وأنيق للتصميم */
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+/* تأثير الماوس للروابط */
+a:hover {
+  color: #151515; /* يتحول للأسود الفاحم عند وقوف الماوس */
+}
+
+/* 5. ديف الأزرار اليمينية (القاضية للدفع لأقصى اليمين) */
+.login {
+  position: relative;
+  margin-left: 800px; /* 👈 يمتص المساحة المتبقية ويقذف الصندوق لليمين فوراً */
+  display: flex;
+  align-items: center;
+  gap: 30px; /* المسافة الفاصلة بين لوغن وريجيستر */
+}
+
+/* 6. تنسيق زر الـ Register ليصبح مستطيلاً محاطاً بإطار كما أردتِ */
+#re {
+  background: transparent;
+  border: 2px solid #7f7f7f;
+  padding: 10px 22px;
+  border-radius: 14px;
+  color: #7f7f7f;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#re:hover {
+  border-color: #151515;
+  color: #151515;
+}
+p {
+  font-size: 200;
+  top: -500px;
+  position: relative;
+  margin: 0;
+  margin-left: 70px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(89, 111, 119);
+}
+h1 {
+  font-size: 200;
+  top: -600px;
+  position: relative;
+  margin: 0;
+  margin-left: 70px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 90px;
+  font-weight: bolder;
+}
+#tr {
+  height: auto;
+  width: 450px;
+  display: block;
+  margin-left: 900px;
+}
+#ree {
+  height: 50px;
+  width: 170px;
+  background-color: aliceblue;
+  border-radius: 50px;
+  top: -400px;
+  position: relative;
+  margin: 0;
+  margin-left: 150px;
+  font-size: larger;
+}
+.images {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  position: relative;
+  top: -350px;
+  padding: 0;
+  margin-left: 70px;
+}
+
+/* تنسيق إضافي لتقييد حجم لوجوهات الشركات فلا تظهر ضخمة */
+.images img {
+  height: 20px; /* تثبيت ارتفاع اللوجوهات لتبدو متناسقة وعلى خط واحد كالتصميم الأصلي */
+  width: auto;
+}
+/* 1. التنسيق الأساسي للصندوق المخفي */
+.dropdown-content {
+  display: none; /* 👈 إخفاء القائمة تماماً في البداية */
+  position: absolute; /* جعل الصندوق يطفو بحرية فوق محتوى الصفحة */
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* ظلال خفيفة وأنيقة كالتصميم */
+  border-radius: 10px; /* حواف دائرية ناعمة */
+  padding: 15px;
+  min-width: 140px; /* أقل عرض للصندوق ليتسع للكلمات */
+  z-index: 10; /* للتأكد من أنه يطفو فوق صورة الـ Hero ولا يختفي تحتها */
+}
+
+/* لتنسيق الروابط والأيقونات داخل القائمة المنسدلة بشكل عمودي */
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* مسافة بين الأيقونة الصغيرة والنص */
+  padding: 8px 0;
+  font-size: 14px;
+  color: #7f7f7f;
+}
+
+/* 2. الكلاس السحري النشط (الذي سيضيفه الـ JS غداً ليظهر القائمة) */
+.dropdown-content.show {
+  display: block; /* 👈 إظهار القائمة فوراً عند إضافة الكلاس */
+}
